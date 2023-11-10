@@ -4,8 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nitpreet Arneja</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #797575;
+            display: flex; 
+            align-items: center;
+            justify-content: space-between; 
+        }
+
+        .topnav h1 {
+            color: #000000;
+            padding: 14px 16px;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .topnav .menu-icon {
+            font-size: 30px;
+            color: #000000;
+            padding: 14px 16px;
+            cursor: pointer;
+        }
+
+       
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+    </style>
 </head>
 <body>
-    <h1> Hello </h1>
+<div class="topnav">
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+    <h1>Nitpreet Arneja</h1>
+    <div>
+        <a href="https://www.linkedin.com/in/nitpreet-arneja-50b190268">
+            <img src="./Images/Linkedin.png" alt="LinkedIn Profile" width="60" height="60">
+        </a>
+        <a href="https://github.com/NitpreetA">
+            <img src="./Images/github.png" alt="LinkedIn Profile" width="60" height="60">
+        </a>
+        
+    </div>
+    
+
+</div>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
 </body>
 </html>
