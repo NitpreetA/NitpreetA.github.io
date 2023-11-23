@@ -1,113 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitpreet Arneja</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .topnav {
-            overflow: hidden;
-            background-color: #797575;
-            display: flex; 
-            align-items: center;
-            justify-content: space-between; 
-        }
-
-        .topnav h1 {
-            color: #000000;
-            padding: 14px 16px;
-            font-size: 32px;
-            margin: 0;
-        }
-
-        .topnav .menu-icon {
-            font-size: 30px;
-            color: #000000;
-            padding: 14px 16px;
-            cursor: pointer;
-        }
-
-       
-
-        .sidenav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-            text-align: center;
-        }
-
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitpreet Arneja Portfolio</title>
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-<div class="topnav">
-    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+
+  <header>
     <h1>Nitpreet Arneja</h1>
-    <div>
-        <a href="https://www.linkedin.com/in/nitpreet-arneja-50b190268">
-            <img src="./Images/Linkedin.png" alt="LinkedIn Profile" width="60" height="60">
-        </a>
-        <a href="https://github.com/NitpreetA">
-            <img src="./Images/github.png" alt="LinkedIn Profile" width="60" height="60">
-        </a>
-        
+    <p>Junior Developer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <p>Hello! I'm Nitpreet Arneja, a passionate junior developer with an intrest going into the mobile development field . 
+        I am currently in my last year at John Abbott College studying computer science.</p>
+        <p>Over the years, I have honed my skills in various programming languages and development tools, allowing me to approach challenges with a diverse and adaptable mindset.</p>
+        <p>As a mobile developer, I enjoy working on both the frontend and backend aspects of applications. My goal is to leverage technology to enhance user experiences and contribute to the ever-evolving field of mobile development.</p>
+        <p>Feel free to explore my projects below, and don't hesitate to reach out if you have any questions or collaboration opportunities. Let's create something amazing together!</p>
+  </section>
+
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <!-- Project Cards Go Here -->
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Description of Project 1.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Description of Project 2.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+      <!-- Add more project cards as needed -->
     </div>
-    
+  </section>
 
-</div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+  </section>
 
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-</div>
-
-<script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "100%";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
-</script>
+  <footer>
+    <p>&copy; 2023 Nitpreet Arneja. All rights reserved.</p>
+  </footer>
 </body>
 </html>
