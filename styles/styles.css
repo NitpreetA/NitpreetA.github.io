@@ -14,6 +14,17 @@ header {
     text-align: center;
 }
 
+.projects button{
+  background-color: #A5C2A0; 
+  border: 1px solid #fff;
+  
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+
+  font-size: 16px;
+}
+
 .container {
   display: flex;
 }
