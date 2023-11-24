@@ -1,3 +1,10 @@
+#website{
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
 
 header {
     background: url('../Images/background3.png') center/cover no-repeat; 
@@ -7,12 +14,37 @@ header {
     text-align: center;
 }
 
+.container {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.skills {
+  margin-bottom: 10px;
+}
+
+
+.about{
+  margin-left: 2%;
+}
+
+header h1 {
+  font-size: xx-large;
+}
+header  p {
+  font-size: x-large;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f8f8f8;
+    background-color: rgb(202,203,192);
   }
 
   header {
@@ -44,19 +76,38 @@ body {
     justify-content: space-around;
   }
 
+  .circle-card{
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(232, 185, 157);
+    border-radius: 8px;
+    display: flex;
+    border: 1px solid #ddd;
+    align-items: flex-start;
+    justify-content: center;
+    color: rgb(52, 52, 52);
+  }
+
+
   .project-card {
-    background-color: #fff;
+    background-color: rgb(188, 202, 198);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1em;
     margin: 1em;
-    max-width: 300px;
+    max-width: 550px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
+  .project-card img{
+
+    width: 100%;
+  }
+
+
   footer {
     background-color: #333;
-    color: #fff;
+    color: #000000;
     text-align: center;
     padding: 1em 0;
   }
