@@ -13,7 +13,10 @@ header {
     padding: 1em 0;
     text-align: center;
 }
-
+.social img{
+  max-height: 200px ;
+  width: auto ;
+}
 .projects button{
   background-color: #A5C2A0; 
   border: 1px solid #fff;
