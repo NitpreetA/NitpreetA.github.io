@@ -13,6 +13,11 @@ header {
     padding: 1em 0;
     text-align: center;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
 .social img{
   max-height: 200px ;
   width: auto ;
@@ -121,7 +126,7 @@ body {
 
   footer {
     background-color: #333;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 1em 0;
   }
