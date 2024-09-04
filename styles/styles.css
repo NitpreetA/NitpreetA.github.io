@@ -41,7 +41,7 @@ button:hover {
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  background-color: rgb(103, 255, 171);
+  background-color: rgb(49, 170, 104);
   color: white;
 }
 
@@ -69,7 +69,7 @@ button:hover {
 .about{
   color: #ffffff;
   padding: 20px;
-  border-right: 2px solid rgb(103, 255, 171);
+  border-right: 2px solid rgb(49, 170, 104);
 }
 
 
@@ -87,7 +87,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(103, 255, 171);
+    background-color: rgb(49, 170, 104);
   }
 
   header {
@@ -151,7 +151,7 @@ body {
 
     margin: 10px 10px 10px 10px;
     padding: 10px;
-    background-color: rgb(103, 255, 171); /* Bootstrap Blue */
+    background-color:  rgb(49, 170, 104); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -168,7 +168,7 @@ body {
   .project-card {
     color: white;
     background-color: 444;
-    border: 4px solid rgb(103, 255, 171);;
+    border: 4px solid  rgb(49, 170, 104);
     border-radius: 8px;
     padding: 1em;
     margin: 1em;
@@ -290,7 +290,7 @@ body {
 #games:checked ~ .carousel-nav label[for="games"],
 #websites:checked ~ .carousel-nav label[for="websites"],
 #mobile-apps:checked ~ .carousel-nav label[for="mobile-apps"] {
-    background-color: rgb(103, 255, 171);
+    background-color:  rgb(49, 170, 104);
     color: #fff;
 }
 
