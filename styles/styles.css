@@ -1,45 +1,64 @@
+
+body{
+  overflow-x: hidden; /* Hide scrollbars */
+}
+*{
+  max-width: 100%;
+  box-sizing: border-box;
+}
 #website{
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
 
 header {
-    background: url('../Images/background3.png') center/cover no-repeat; 
+  display: flex;
     background-color: #333;
     color: #fff;
     padding: 1em 0;
     text-align: center;
+    width: 100%;
 }
+#name-role{
+  margin-left: 20px;
+}
+
 
 button:hover {
   cursor: pointer;
 }
 
 .social img{
-  max-height: 200px ;
+  max-height: 70px ;
   width: auto ;
 }
-.projects button{
-  background-color: #A5C2A0; 
-  border: 1px solid #fff;
-  
+.project-card a button{
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: rgb(103, 255, 171);
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-
-  font-size: 16px;
 }
+
 
 .container {
   display: flex;
+  overflow-wrap: break-word; /* Ensures long words break within the div */
+    word-wrap: break-word; /* Support for older browsers */
+    overflow: hidden; 
+    max-width: 100%; 
+    width: 100%; 
 }
 
 .column {
   flex: 1;
   padding: 10px;
+  width: auto;
 }
 
 .skills {
@@ -48,8 +67,13 @@ button:hover {
 
 
 .about{
-  margin-left: 2%;
+  color: #ffffff;
+  padding: 20px;
+  border-right: 2px solid rgb(103, 255, 171);
 }
+
+
+
 
 header h1 {
   font-size: xx-large;
@@ -63,7 +87,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(202,203,192);
+    background-color: rgb(103, 255, 171);
   }
 
   header {
@@ -89,11 +113,25 @@ body {
     padding: 2em;
   }
 
-  .projects {
+
+
+  .circle-img {
+    width: 150px; /* Set the desired width */
+    height: 150px; /* Set the height equal to the width to maintain a perfect circle */
+    border-radius: 50%; /* This makes the image circular */
+    overflow: hidden; /* Ensures the image fits within the circle */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #333; /* Optional: Add a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire circle */
+}
 
   .circle-card{
     width: 100%;
@@ -108,20 +146,45 @@ body {
   }
 
 
+
+.language-button {
+
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    background-color: rgb(103, 255, 171); /* Bootstrap Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+  .top{
+    width: 100%; /* Adjust as needed */
+    overflow: hidden; /* Hide overflow to keep scrolling effect within the div */
+    position: relative;
+  }
+
   .project-card {
-    background-color: rgb(188, 202, 198);
-    border: 1px solid #ddd;
+    color: white;
+    background-color: 444;
+    border: 4px solid rgb(103, 255, 171);;
     border-radius: 8px;
     padding: 1em;
     margin: 1em;
     max-width: 550px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .project-card img{
-
     width: 100%;
+    font-size: large;
+    height: auto;
   }
+
+
+  .heightss{
+    height: 60%;
+    display: block;
+  }
+  
 
 
   footer {
@@ -130,3 +193,175 @@ body {
     text-align: center;
     padding: 1em 0;
   }
+
+  .scroll{
+    
+  }
+.sections{
+  
+  display: flex;
+  font-size: large;
+   background-color: #444;
+   margin: 50px 0;
+   border-radius: 5%;
+   height: auto;
+   width: auto;
+   opacity: 0;
+   transform: translateX(100%);
+   transition: transform 1s ease-out, opacity 1s ease-out;
+   overflow-wrap: break-word; /* Ensures long words break within the div */
+    word-wrap: break-word; /* Support for older browsers */
+    overflow: hidden; 
+
+}
+.sections.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.half-a-border-on-top {
+  border-top: 1px solid;
+  border-left:  1px solid;
+  border-image: linear-gradient(to right, #000 50%, transparent 50%) 100% 1;
+}
+
+.contact{
+  margin-left: 2%;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 10px;
+}
+  .carousel {
+
+    width: 100%;
+  }
+
+
+
+.carousel-nav {
+  display: flex;
+  justify-content: space-around;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.carousel-nav label {
+  margin: 0 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel input {
+    display: none;
+}
+
+.carousel-content {
+  color: white;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    height: 1200px;
+}
+.contents{
+  display: flex;
+  width: 100%;
+  height: 700px;
+}
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    transition: left 0.5s;
+    opacity: 0;
+}
+
+#games:checked ~ .carousel-content #games-item,
+#websites:checked ~ .carousel-content #websites-item,
+#mobile-apps:checked ~ .carousel-content #mobile-apps-item {
+    left: 0;
+    opacity: 1;
+}
+
+#games:checked ~ .carousel-nav label[for="games"],
+#websites:checked ~ .carousel-nav label[for="websites"],
+#mobile-apps:checked ~ .carousel-nav label[for="mobile-apps"] {
+    background-color: rgb(103, 255, 171);
+    color: #fff;
+}
+
+
+
+.typing-container {
+  font-size: 3.5em;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  width: auto; /* Adjusted width to match the length of the text */
+  animation: typing 6s steps(38) 1s 1 normal both, blink 0.75s step-end infinite;
+  color: white;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 43ch; } /* Set to match the full length of the text */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typing-text::before {
+  content: "Hello! I'm Nitpreet Arneja, a junior developer";
+}
+
+.widess{
+display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stack columns on top of each other on smaller screens */
+  }
+  .typing-container {
+    font-size: 1.2em;
+    text-wrap: wrap;
+  }  
+  .sections{
+    font-size: small;
+  }
+  .carousel-nav {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .column {
+      min-width: 100%; /* Columns will take full width on smaller screens */
+  }
+  .contents{
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .project-card img{
+    display: block;
+    
+  }
+  .heightss{
+    height: 40%;
+  }
+  
+.carousel-content {
+  height: 2000px;
+}
+.project-card {
+  font-size: small;
+  height: 100%;
+}
+}
+
+
