@@ -1,363 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, orientation=portrait">
-  <title>Nitpreet Arneja Portfolio</title>
-  <link rel="stylesheet" href="./styles/styles.css">
-</head>
-
-<body>
-  <script>
-
-function isSmallDevice() {
-    return window.innerWidth <= 768;
-}
-
-document.addEventListener("scroll", function() {
-    const sections = document.querySelectorAll('.sections');
-    if(isSmallDevice()){
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top - 100;
-        const sectionBottom = section.getBoundingClientRect().bottom;
-
-        // Check if the top of the section has reached the top of the viewport 
-        // and if the bottom of the section has not passed the viewport.
-        if (sectionTop <= 0 && sectionBottom >= 0) {
-            section.classList.add('visible');
-        } else {
-            section.classList.remove('visible');
-        }
-    });
-    }
-    else{
-      const triggerHeight = window.innerHeight / 2;
-
-sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionCenter = sectionTop + section.offsetHeight / 2;
-    
-    
-      if (sectionCenter < triggerHeight + window.innerHeight / 2 && sectionCenter > triggerHeight - window.innerHeight / 2) {
-        section.classList.add('visible');
-    } else {
-        section.classList.remove('visible');
-    }
-    });
-    
-
-   
-}});
-
-
-
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction(btn) {
-      var dropdownContent = btn.nextElementSibling;
-
-    // Toggle the 'show' class to expand/collapse the content
-      dropdownContent.classList.toggle("show");
-    }
-    function Test(){
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, orientation=portrait">
+      <title>Nitpreet Arneja Portfolio</title>
+      <link rel="stylesheet" href="./styles/styles.css">
+   </head>
+   <body>
+      <script>
+             function Test(){
       open('Game-Template')
     }
-    
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-    </script>
-
-
-  <header>
-    <div class="circle-img">
-      <img src="./Images/Snapchat-169795335.jpg" alt="Circular Image">
-  </div>
-  <div id="name-role">
-    <h1>Nitpreet Arneja</h1>
-    <p>Junior Developer</p>
-    <hr color="#67ffab" size="2">
-  </div>
-  </header>
-  <div id="website">
-    <div class="typing-container">
-      <p class="typing-text"></p>
-    </div>
-    <section id="flip" class="sections">
-      
-      <div class="about">
-        <h3>About me</h3>    
-        <p>
-          I am an eager candidate equipped with a technical computer science degree.
-          Over the past three years in my program I have learned various programming skills and development tools, which
-          allow me to approach challenges with an adaptable mindset.
-          As a  recent student that is exploring the computer science field, I particularly enjoy mobile development as it
-          provides a creative space.
-          I am a sports enthusiates, coder and caffeine junkie.</p>
-
-        <h3>Skills</h3>
-        <div class="container">
-          <div class="column">
-            <div class="skills">
-              <span>C# - Advanced skills </span>
-            </div>
-            <div class="skills">
-              <span>Java - Advanced skills </span>
-            
-            </div>
-            <div class="skills">
-              <span>Kotlin - Advanced skills</span>
-              
-            </div>
-            <div class="skills">
-              <span>Jetpack Compose - Advanced skills </span>
-              
-            </div>
-            <div class="skills">
-              <span>JavaScript - Advanced skills </span>
-              
-            </div>
-            <div class="skills">
-              <span>SQL - Advanced skills </span>
-              
-            </div>
-            <div class="skills">
-              <span>React Native - Intermediate skills </span>
-              
-            </div>
-            <div class="skills">
-              <span>.NET Maui - Advanced skills </span>
-              
-            </div>
-          </div>
-          <div class="column">
-            <div class="skills">
-              <span>React - Intermediate skills </span>
-            </div>
-              <div class="skills">
-                <span>Python - Advanced skills </span>
-                
-              </div>
-              <div class="skills">
-                <span>HTML - Advanced skills  </span>
-                
-              </div>
-              <div class="skills">
-                <span>CSS - Intermediate skills </span>
-                
-              </div>
-              <div class="skills">
-                <span>TypeScript - Intermediate skills </span>
-               
-              </div>
-              <div class="skills">
-                <span>MongoDB - Advanced skills  </span>
-                
-              </div>
-    
-              <div class="skills">
-                <span>Visual Basics - Advanced skills </span>
-              </div>
-            
-          </div>
-           
-        
+      </script>
+      <header>
+         <div class="circle-img">
+            <img src="./Images/Snapchat-169795335.jpg" alt="Circular Image">
          </div>
-          
-
-      </div>
-      <div class="contact">
-      <h3>Where you can reach me</h3>
-      <h4>Email: nitha6718@gmail.com</h4>
-      <h4>Phone: 514-891-6484</h4>
-      <h3>My Linkedin, Github and my CV</h3>
-      <a class="social"href="https://github.com/NitpreetA" target="_blank"><img src="./Images/github.png"></a>
-      <a class="social" href="https://www.linkedin.com/in/nitpreet-arneja-50b190268/" target="_blank"><img  src="./Images/Linkedin.png"></a>
-     <a class="social" href="./files/ArnejaNitpreet.pdf" target="_blank"><img src="./Images/cv.png"> </a> 
-
-      </div>
-    </section>
-    <h1 style="text-align: center; color: white;">View Portfolio</h1>
-    <section class="sections">
-        <div class="carousel">
-          <input type="radio" name="carousel" id="games" checked>
-          <input type="radio" name="carousel" id="websites">
-          <input type="radio" name="carousel" id="mobile-apps">
-
-          <div class="carousel-nav">
-            <div>
-              <input type="radio" name="carousel" id="games" checked>
-              <label for="games">Games</label>
+         <div id="name-role">
+            <h1>Nitpreet Arneja</h1>
+            <p>Junior Developer</p>
+            <hr color="#67ffab" size="2">
+         </div>
+      </header>
+      <div id="website">
+         <section id="flip" class="sections">
+            <div class="about">
+               <h1>About me</h1>
+               <p>
+                  I am an eager candidate equipped with a technical computer science degree.
+                  Over the past three years in my program I have learned various programming skills and development tools, which
+                  allow me to approach challenges with an adaptable mindset.
+                  As a  recent student that is exploring the computer science field, I particularly enjoy mobile development as it
+                  provides a creative space.
+                  I am a sports enthusiates, coder and caffeine junkie.
+               </p>
+               <h3>Skills</h3>
+               <div class="container">
+                  <div class="column">
+                     <div >
+                        <span>C# - Advanced skills </span>
+                     </div>
+                     <div>
+                        <span>Java - Advanced skills </span>
+                     </div>
+                     <div>
+                        <span>Kotlin - Advanced skills</span>
+                     </div>
+                     <div >
+                        <span>Jetpack Compose - Advanced skills </span>
+                     </div>
+                     <div >
+                        <span>JavaScript - Advanced skills </span>
+                     </div>
+                     <div >
+                        <span>SQL - Advanced skills </span>
+                     </div>
+                     <div >
+                        <span>React Native - Intermediate skills </span>
+                     </div>
+                     <div >
+                        <span>.NET Maui - Advanced skills </span>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div >
+                        <span>React - Intermediate skills </span>
+                     </div>
+                     <div >
+                        <span>Python - Advanced skills </span>
+                     </div>
+                     <div >
+                        <span>HTML - Advanced skills  </span>
+                     </div>
+                     <div >
+                        <span>CSS - Intermediate skills </span>
+                     </div>
+                     <div >
+                        <span>TypeScript - Intermediate skills </span>
+                     </div>
+                     <div >
+                        <span>MongoDB - Advanced skills  </span>
+                     </div>
+                     <div >
+                        <span>Visual Basics - Advanced skills </span>
+                     </div>
+                  </div>
+               </div>
             </div>
-            
-            <div>
-              <input type="radio" name="carousel" id="websites">
-            <label for="websites">Websites</label>
+            <div class="contact">
+               <h3>Where you can reach me</h3>
+               <h4>Email: nitha6718@gmail.com</h4>
+               <h4>Phone: 514-891-6484</h4>
+               <h3>My Linkedin, Github and my CV</h3>
+               <a class="social"href="https://github.com/NitpreetA" target="_blank"><img src="./Images/github.png"></a>
+               <a class="social" href="https://www.linkedin.com/in/nitpreet-arneja-50b190268/" target="_blank"><img  src="./Images/Linkedin.png"></a>
+               <a class="social" href="./files/ArnejaNitpreet.pdf" target="_blank"><img src="./Images/cv.png"> </a> 
             </div>
-            
+         </section>
+         <section class="sections" style="flex-direction: column;">
             <div>
-              <input type="radio" name="carousel" id="mobile-apps">
-            <label for="mobile-apps">Mobile Apps</label>
+               <h1 style="text-align: center; color: white;">View Portfolio</h1>
             </div>
-            
-          </div>
-
-          <div class="carousel-content">
-              <div class="carousel-item" id="games-item">
-                <h3>Games</h3>
-                <div class="contents">
-                  <div class="project-card">
-                    <div class="top">
-                      <h3>Lava Run - 2021</h3>
-                      <div class="scroll">
-                        <button class="language-button">C#</button>
-                    </div>
-                    </div>
-                    <br>
-                    <img class="heightss" src="./Images/run.PNG">
-                    <a href="https://github.com/NitpreetA/LavaRun" style="text-decoration:none">
-                      <button>View Git Repository</button>
-                    </a>
+            <div class="carousel">
+               <input type="radio" name="carousel" id="games" >
+               <input type="radio" name="carousel" id="websites">
+               <input type="radio" name="carousel" id="mobile-apps">
+               <div class="carousel-nav">
+                  <div>
+                     <input type="radio" name="carousel" id="games" checked>
+                     <label for="games">Games</label>
                   </div>
-                
-                  <div class="project-card">
-                    <div class="top">
-                      <h3>Breaking Bad - Pac Man - 2023</h3>
-                      <div class="scroll">
-                        <button class="language-button">JavaScript</button>
-                    </div>
-                    </div>
-                    <br>
-                    <img class="heightss" src="./Images/pacman.png">
-                    <a href="https://github.com/NitpreetA/PacmanBB" style="text-decoration:none">
-                      <button>View Git Repository</button>
-                    </a>
-                    <a>
-                    <button onclick="Test()">Test game</button>
-
-                    </a>
+                  <div>
+                     <input type="radio" name="carousel" id="websites">
+                     <label for="websites">Websites</label>
                   </div>
-                </div>
-                      
-              
-              </div>
-
-              <div class="carousel-item" id="websites-item">
-                  <h3>Websites</h3>
-                  <div class="contents"> 
-                    <div class="project-card">
-                      <div class="top">
-                        <h3>Athletic Metrics - 2022</h3>
-                        <div class="scroll">
-                          <button class="language-button">JavaScript</button>
-                          <button class="language-button">React</button>
-                          <button class="language-button">MongoDB</button>
-                          <button class="language-button">Express</button>
-                          <button class="language-button">React</button>
-                          <button class="language-button">Node</button>
+                  <div>
+                     <input type="radio" name="carousel" id="mobile-apps">
+                     <label for="mobile-apps">Mobile Apps</label>
+                  </div>
+               </div>
+               <div class="carousel-content">
+                  <div class="carousel-item" id="games-item" >
+                     <h3>Games</h3>
+                     <div class="contents">
+                        <div class="project-card">
+                           <div class="hero-image">
+                              <img src="Images/run.PNG" class="image-full">
+                           </div>
+                           <div class="project-content">
+                              <h2>Lava Run - 2021</h2>
+                              <div class="skills">
+                                 <button class="skill-btn">C#</button>
+                              </div>
+                              <div>
+                                 <a href="https://github.com/NitpreetA/LavaRun" >
+                                 <button class="skill-btn">View Git Repository</button>
+                                 </a>
+                              </div>
+                           </div>
                         </div>
-                      </div>
-                      <br>
-                      <img class="widess" src="./Images/HomeScreen.PNG">
-                    <a href="https://github.com/NitpreetA/AthleticMetric" style="text-decoration:none">
-                      <button>View Git Repository</button>
-                    </a>
-                    <a href="https://frontend-0tps.onrender.com/" style="text-decoration:none">
-                      <button>Vist the website </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-                <div class="carousel-item" id="mobile-apps-item">
-                  <h3>Mobile Applications</h3>
-                  <div class="contents">
-                    <div class="project-card">
-                      <div class="top">
-                        <h3>Always Hungry - 2023</h3>
-                        <div class="scroll" style="margin-bottom: 58px;">
-                          <button class="language-button">Kotlin</button>
-                          <button class="language-button">Jetpack Compose</button>
+                        <div class="project-card">
+                           <div class="hero-image">
+                              <img src="Images/pacman.png"  class="image-full">
+                           </div>
+                           <div class="project-content">
+                              <h2> Pac Man - 2023</h2>
+                              <div class="skills">
+                                 <button class="skill-btn">JavaScript</button>
+                              </div>
+                              <div>
+                                 <a href="https://github.com/NitpreetA/PacmanBB" style="text-decoration:none">
+                                 <button>View Git Repository</button>
+                                 </a>
+                                 <a>
+                                 <button onclick="Test()">Test game</button></a>
+                              </div>
+                           </div>
                         </div>
-                      </div>
-                      <br>
-                      
-                      <img class="heightss" src="./Images/Home.PNG">
-                      <a href="https://github.com/NitpreetA/AlwaysHungryFoods" style="text-decoration:none">
-                        <button>View Git Repository</button>
-                      </a>
-                    </div>
-                    <div class="project-card">
-                      <div class="top">
-                        <h3>Fresh Tomatoes - 2023</h3>
-                        <div class="scroll">
-                          <button class="language-button">Kotlin</button>
-                          <button class="language-button">Jetpack Compose</button>
-                          <button class="language-button">Firebase</button>
-                          <button class="language-button">TMDB API</button>
-                          
-                      </div>
-                      </div>
-                      <br>
-
-                      <img class="heightss" src="./Images/FT.png">
-                      <a href="https://github.com/agrantushinsky/5A6-group-project" style="text-decoration:none">
-                        <button>View Git Repository</button>
-                      </a>
-                      <a href="./files/app-release.apk">
-                        <button>Download APK</button>
-                      </a>
-                    </div>
-                    <div class="project-card">
-                      <div class="top">
-                      <h3>Growers.Io - 2024</h3>
-                        <div class="scroll">
-                          <button class="language-button">.Net Maui</button>
-                          <button class="language-button">IoT</button>
-                          <button class="language-button">Azure</button>
-                          <button class="language-button">Python</button>
-                          <button class="language-button">Firebase</button>
-                          <button class="language-button">Sensors</button>
-                          <button class="language-button">Hardware</button>
+                     </div>
+                  </div>
+                  <div class="carousel-item" id="websites-item">
+                     <h3>Websites</h3>
+                     <div class="contents">
+                        <div class="project-card">
+                           <div class="hero-image">
+                              <img src="Images/HomeScreen.PNG"  class="image-full">
+                           </div>
+                           <div class="project-content">
+                              <h2>Athletic Metrics - 2022</h2>
+                              <div class="skills">
+                                 <button class="skill-btn">JavaScript</button>
+                                 <button class="skill-btn">MongoDB</button>
+                                 <button class="skill-btn">Express</button>
+                                 <button class="skill-btn">React</button>
+                                 <button class="skill-btn">Node</button>
+                              </div>
+                              <div>
+                                 <a href="https://github.com/NitpreetA/AthleticMetric" style="text-decoration:none">
+                                 <button>View Git Repository</button>
+                                 </a>
+                                 <a href="https://frontend-0tps.onrender.com/" style="text-decoration:none">
+                                 <button>Vist the website </button>
+                                 </a>
+                              </div>
+                           </div>
                         </div>
-                      </div>
-                      <br>
-
-                      <img class="heightss" src="./Images/IOT.png">
-                      <a href="https://github.com/NitpreetA/GrowersProject" style="text-decoration:none" > 
-                        <button>View Git Repository</button>
-                      </a>
-                    </div>
-                        
+                     </div>
                   </div>
+                  <div class="carousel-item" id="mobile-apps-item">
+                     <h3>Mobile Applications</h3>
+                     <div class="contents">
+                        <div class="project-card">
+                           <div class="hero-image">
+                              <img src="Images//FT.png"  class="image-full">
+                           </div>
+                           <div class="project-content">
+                              <h2>Fresh Tomatoes - 2023</h2>
+                              <div class="skills">
+                                 <button class="skill-btn">Kotlin</button>
+                                 <button class="skill-btn">Jetpack Compose</button>
+                                 <button class="skill-btn">Firebase</button>
+                                 <button class="skill-btn">TMDB API</button>
+                              </div>
+                              <div>
+                                 <a href="https://github.com/agrantushinsky/5A6-group-project" style="text-decoration:none">
+                                 <button>View Git Repository</button>
+                                 </a>
+                                 <a href="./files/app-release.apk">
+                                 <button>Download APK</button>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="project-card">
+                           <div class="hero-image">
+                              <img src="Images/Home.PNG"  class="image-full">
+                           </div>
+                           <div class="project-content">
+                              <h2>Always Hungry - 2023</h2>
+                              <div class="skills">
+                                 <button class="skill-btn">Kotlin</button>
+                                 <button class="skill-btn">Jetpack Compose</button>
+                                 <br>
+                              </div>
+                              <div>
+                                 <br>
+                                 <br>
+                                 <a href="https://github.com/NitpreetA/AlwaysHungryFoods" style="text-decoration:none">
+                                 <button>View Git Repository</button>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="project-card">
+                           <div class="hero-image">
+                              <img src="Images/IOT.png"  class="image-full">
+                           </div>
+                           <div class="project-content">
+                              <h2>Growers.Io - 2024</h2>
+                              <div class="skills">
+                                 <button class="skill-btn">.Net Maui</button>
+                                 <button class="skill-btn">IoT</button>
+                                 <button class="skill-btn">Azure</button>
+                                 <button class="skill-btn">Python</button>
+                                 <button class="skill-btn">Firebase</button>
+                                 <button class="skill-btn">Sensors</button>
+                                 <button class="skill-btn">Hardware</button>
+                              </div>
+                              <div>
+                                 <a href="https://github.com/NitpreetA/GrowersProject" style="text-decoration:none" > 
+                                 <button>View Git Repository</button>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-              </div>
-
-             
-                      
-                  
-              </div>
-          </div>
+               </div>
+            </div>
+      </section>
       </div>
-    </section>
-
-
-
-
-  </div>
-  <footer>
-    <p>&copy; 2024 Nitpreet Arneja. All rights reserved.</p>
-  </footer>
-</body>
-
+      <footer>
+         <p>&copy; 2024 Nitpreet Arneja. All rights reserved.</p>
+      </footer>
+   </body>
 </html>
