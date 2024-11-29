@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahungry</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<style>
+.navbtn {
+  font-family: "Audiowide", sans-serif;
+}
+#navlbl{
+    font-family: "Audiowide", sans-serif;
+    color: white;
+}
+</style>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <script>
+        function Click(){
+        open("index.html")
+        }
+    </script>
+    <div id="nav">
+        <div>
+            <img src="logo.png" onclick="Click()">
+        </div>
+        <div>
+            <h1 id="navlbl">Always Hungry</h1>
+        </div>
+        <div class="row">
+            <button class="navbtn">Clothing</button>
+            <button class="navbtn">Food</button>
+            <button class="navbtn">Music</button>
+        </div>
+    </div>
+    <hr class="horizontal-line">
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slides">
+              <div class="slide">Seasonal Collection</div>
+              <div class="slide">New Items</div>
+              <div class="slide">Latest Song</div>
+            </div>
+            <div class="navigation">
+              <button class="nav-btn prev">‹</button>
+              <button class="nav-btn next">›</button>
+            </div>
+          </div>
+    </div>
+    
+    
+      <script>
+        const slides = document.querySelector('.carousel-slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        let currentIndex = 0;
+    
+        function showSlide(index) {
+          slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+    
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides; // Loop to the first slide
+          showSlide(currentIndex);
+        }
+    
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loop to the last slide
+          showSlide(currentIndex);
+        }
+    
+        // Add event listeners for buttons
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    
+        // Autoplay functionality
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+      </script>
+    <div class="rowcnt">
+        <div class="column">
+          <a href="page1.html" class="button">Clothing</a>
+        </div>
+        <div class="column">
+          <a href="page2.html" class="button">Food</a>
+        </div>
+        <div class="column">
+          <a href="page3.html" class="button">Music</a>
+        </div>
+    </div>  
+</body>
+</html>
