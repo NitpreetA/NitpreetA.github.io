@@ -295,7 +295,10 @@ body {
 }
   .carousel {
 
-    width: 100%;
+    display: flex;
+    height: auto;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
 
